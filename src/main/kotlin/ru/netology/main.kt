@@ -1,14 +1,8 @@
 fun main() {
 
-    val likes = 11
+    val likes = 121
 
-    println("Понравилось $likes ${likesSinglePlay(likes)}")
+    val likesSinglePlay: String = if (likes % 10 == 1 && likes % 100 !== 11) "человеку" else "людям"
+    println("Понравилось $likes $likesSinglePlay")
 }
 
-fun likesSinglePlay(likes: Int): String {
-    return if (likes % 10 == 1 && likes % 100 !== 11) {
-        return "человеку"
-    } else {
-        return "людям"
-    }
-}
